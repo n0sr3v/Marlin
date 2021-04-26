@@ -778,7 +778,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 18  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 28  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.6   // Z offset: -below +above  [the nozzle] (prev: -2.2 modified 14.02.20)
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.9   // Z offset: -below +above  [the nozzle] (prev: -2.2 modified 14.02.20 -> higher neg value means less gap)
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 30
@@ -855,7 +855,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true // default false - had to change this (because of turned extruder)
+#define INVERT_E0_DIR false // default false - on native cl260 extruder change this (because of turned extruder)
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1257,7 +1257,7 @@
 
 // Preheat Constants
 #define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_TEMP_HOTEND 240
